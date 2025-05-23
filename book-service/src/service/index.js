@@ -1,10 +1,7 @@
 const { v4: uuidv4 } = require('uuid');
 const path = require('path');
 const axios = require('axios');
-
-const library = {
-    'books': []
-}
+const booksModel = require('../models/books.model');
 
 const createUser = async (req, res) => {
     res.status(201)
@@ -18,28 +15,25 @@ const getCreateBooks = async (req, res) => {
 }
 
 const createBooks = async (req, res) => {
-    const {books} = library
+    const {title, description, authors, favourite, fileCover, fileName} = req.body
 
     try {
-        const {title, description, authors, favourite, fileCover, fileName} = req.body
-
         if (!req.file) {
             return res.status(400).json({error: 'Файл книги обязателен'});
         }
 
-        const newBook = {
-            id: uuidv4(),
-            title,
-            description,
-            authors,
-            favourite,
-            fileCover,
-            fileName,
-            fileBook: req.file.filename
-        }
-
-        books.push(newBook)
-
+        const newBook = new booksModel(
+            {
+                title,
+                description,
+                authors,
+                favourite,
+                fileCover,
+                fileName,
+                fileBook: req.file.filename
+            }
+        )
+        await newBook.save();
         res.status(201)
         res.redirect(`/books/getAllBooks`);
     } catch (error) {
@@ -48,8 +42,8 @@ const createBooks = async (req, res) => {
 }
 
 const getAllBooks = async (req, res) => {
-    const {books} = library
     try {
+        const books = await booksModel.find()
         res.render("./library/index", {
             title: 'Библиотека',
             currentPath: req.path,
@@ -63,9 +57,8 @@ const getAllBooks = async (req, res) => {
 const getBooksByID = async (req, res) => {
     const {id} = req.params
     try {
-        const {books} = library
-        const indx = books.findIndex(el => el.id === id)
-        if (indx !== -1) {
+        const book = await booksModel.findById({_id: id})
+        if (book) {
             axios.post(`http://localhost:3005/counter/${id}/incr`).catch(err => {
                 console.error("Ошибка при инкременте счетчика:", err.message);
             })
@@ -75,7 +68,7 @@ const getBooksByID = async (req, res) => {
                     res.render("library/view", {
                         title: "Просмотр",
                         book: {
-                            ...books[indx],
+                            ...book.toObject(),
                             views: viewsCount
                         },
                     });
@@ -93,13 +86,12 @@ const getBooksByID = async (req, res) => {
 }
 
 const getUpdateBooks = async (req, res) => {
+    const {id} = req.params
     try {
-        const {books} = library
-        const {id} = req.params
-        const indx = books.findIndex(el => el.id === id)
+        const book = await booksModel.findById({_id: id})
         res.render("library/update", {
             title: "Редактировать книгу",
-            book: books[indx]
+            book: book
         });
     } catch (error) {
         console.error(error);
@@ -108,44 +100,35 @@ const getUpdateBooks = async (req, res) => {
 }
 
 const updateBooks = async (req, res) => {
-    const {books} = library
+    const {title, description, authors} = req.body
+    const {id} = req.params
     try {
-        const {title, description, authors} = req.body
-        const {id} = req.params
-        const indx = books.findIndex(el => el.id === id)
-
-        if (indx !== -1) {
-            books[indx] = {
-                ...books[indx],
-                title,
-                description,
-                authors,
+        const book = await booksModel.updateOne (
+            {_id: id},
+        {
+            $set: {
+                title: title,
+                description: description,
+                authors: authors
             }
-
-            res.redirect(`/books/getAllBooks/`);
-        } else {
+        })
+        if (!book) {
             res.status(404)
             res.json('404 | Страница не найдена')
         }
+        res.redirect(`/books/getAllBooks/`)
     } catch (error) {
         console.error(error)
     }
+
 }
 
-const deleteBooks = async (req, res) => {
-    const {books} = library
-    try {
-        const {id} = req.params
-        const indx = books.findIndex(el => el.id === id)
-        const book = books[indx]
 
-        if (indx !== -1) {
-            books.splice(indx, 1)
-            res.redirect(`/books/getAllBooks`);
-        } else {
-            res.status(404)
-            res.redirect('/404')
-        }
+const deleteBooks = async (req, res) => {
+    const {id} = req.params
+    try {
+        await booksModel.deleteOne ({_id: id})
+        res.redirect(`/books/getAllBooks/`)
     } catch (error) {
         console.error(error)
     }

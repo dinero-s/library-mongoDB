@@ -25,14 +25,34 @@ services:
         condition: service_healthy
     restart: unless-stopped
 
-  library:
+  library:  # Это ваш book-service
     build:
       context: ./book-service
     ports:
-      - "81:3005"
+      - "81:3000"
     environment:
       - NODE_ENV=production
+    depends_on:
+      mongo:
+        condition: service_healthy
     restart: unless-stopped
+
+  mongo:
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
 volumes:
   redis_data:
+  mongo_data:

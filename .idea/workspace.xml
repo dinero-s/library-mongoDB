@@ -5,45 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65d39f94-61d1-4f45-aaff-9c8618564b38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/book-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-service/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-service/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-service/src/lib/redis-client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-service/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-service/src/service/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/404-errorMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/middleware/404-errorMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/uploadBooksMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/middleware/uploadBooksMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746438447558-501102644-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746687916401-497318039-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746687933777-501879425-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746687990279-803064489-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746688033686-755475701-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746688089158-376725332-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746690237077-600981500-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746690291092-971620083-99px_ru_wallpaper_155926_master_chief__master_chif__serija_igr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746690876253-762769179-Ð Ð¾Ð¼Ð° ÐÐ²ÐµÑÑ - Ð¡Ð¾Ð»Ð½ÑÐµ Ð·Ð° Ð½Ð°Ñ.fb2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746691055357-425731691-Рома Зверь - Солнце за нас.fb2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/books/1746701782770-363060190-Рома Зверь - Солнце за нас.fb2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/books.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/router/books.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/errors/404.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/errors/404.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/layout-end.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/layouts/layout-end.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/layout-start.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/layouts/layout-start.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/menu.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/layouts/menu.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/library/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/library/create.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/library/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/library/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/library/update.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/library/update.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/library/view.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/library/view.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/models/books.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747733551489-457636125-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747733735699-753994114-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747734043251-430738512-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747734214035-342792921-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747734237103-188402275-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747735634231-520899135-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747735813811-208127424-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747735865633-850030467-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747735891987-146959637-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747738869893-487133831-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747739101064-191421942-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747739256720-63844028-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747740130897-62675458-512119.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747972269000-35763574-Рома Зверь - Солнце за нас.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/public/books/1747972330777-37498713-Рома Зверь - Солнце за нас.fb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/views/library/view.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/library/view.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +47,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dinero-s&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:dinero-s/libraryEducationProject.git&quot;,
+    &quot;accountId&quot;: &quot;76e8eebe-7792-4e99-852b-7d0079eae3e3&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -75,7 +74,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.15.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.15.17&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.15.21&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -113,7 +112,15 @@
       <workItem from="1747193756023" duration="322000" />
       <workItem from="1747208676487" duration="5084000" />
       <workItem from="1747280023611" duration="4279000" />
-      <workItem from="1747366412682" duration="3441000" />
+      <workItem from="1747366412682" duration="4669000" />
+      <workItem from="1747371097773" duration="2000" />
+      <workItem from="1747371144519" duration="23000" />
+      <workItem from="1747629700844" duration="2755000" />
+      <workItem from="1747647181797" duration="3225000" />
+      <workItem from="1747659346024" duration="442000" />
+      <workItem from="1747727209019" duration="8597000" />
+      <workItem from="1747971283719" duration="1147000" />
+      <workItem from="1747972587557" duration="33000" />
     </task>
     <servers />
   </component>

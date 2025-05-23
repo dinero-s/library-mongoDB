@@ -4,6 +4,14 @@ const path = require('path');
 const errorMiddleware = require('./middleware/404-errorMiddleware');
 const indexRouter = require('./router');
 const booksRouter = require('./router/books');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/', {
+    auth: {
+        username: 'admin',
+        password: 'example'
+    }
+}).then(() => console.log('Mongoose Connected!'));
 
 const app = express();
 app.use(express.json());

@@ -12,8 +12,8 @@
         </ul>
     </div>
     <div class="card-footer">
-        <a href="/books/getUpdate/<%= book.id %>" class="btn btn-warning">Редактировать</a>
-        <form action="/books/delete/<%= book.id %>/" method="POST" class="d-inline">
+        <a href="/books/getUpdate/<%= book._id %>" class="btn btn-warning">Редактировать</a>
+        <form action="/books/delete/<%= book._id %>/" method="POST" class="d-inline">
             <button type="submit" class="btn btn-danger">Удалить</button>
         </form>
         <a href="/books/getAllBooks" class="btn btn-secondary">Назад к списку</a>

@@ -1,11 +1,10 @@
-const { v4: uuidv4 } = require('uuid');
 const path = require('path');
 const axios = require('axios');
 const booksModel = require('../models/books.model');
+const {io} = require("../index");
 
 const createUser = async (req, res) => {
-    res.status(201)
-    res.json({id: 1, mail: "test@mail.ru"})
+    res.status(201).json({id: 1, mail: "test@mail.ru"})
 }
 
 const getCreateBooks = async (req, res) => {
@@ -123,7 +122,6 @@ const updateBooks = async (req, res) => {
 
 }
 
-
 const deleteBooks = async (req, res) => {
     const {id} = req.params
     try {
@@ -152,6 +150,30 @@ const downloadBooks = async (req, res) => {
     }
 }
 
+const addComment = async (req, res) => {
+    const {id} = req.params;
+    const {comment} = req.body;
+    const io = req.io
+    console.log("Полученные данные:", {id, comment})
+    try {
+        const book = await booksModel.findById(id);
+        if (!book) {
+            return res.status(404).json({error: 'Книга не найдена'});
+        }
+
+        book.comments.push(comment);
+        await book.save();
+        console.log("Сохранённая книга:", book.toObject())
+
+        io.emit('newComment', {bookId: id, comment});
+
+        res.redirect(`/books/getBooksByID/${id}`);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: 'Ошибка сервера'});
+    }
+}
+
 module.exports = {
     getUpdateBooks,
     getCreateBooks,
@@ -162,4 +184,5 @@ module.exports = {
     updateBooks,
     deleteBooks,
     downloadBooks,
+    addComment
 }

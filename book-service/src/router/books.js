@@ -18,4 +18,6 @@ router.post('/delete/:id/', bookService.deleteBooks)
 
 router.get('/download/:id/', bookService.downloadBooks)
 
+router.post('/addComment/:id', bookService.addComment)
+
 module.exports = router;

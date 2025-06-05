@@ -42,7 +42,7 @@ app.use('/', indexRouter)
 app.use('/books', booksRouter)
 
 io.on('connection', (socket) => {
-    console.log('Новое подключение:', socket.id);
+    // console.log('Новое подключение:', socket.id);
 });
 
 app.use(errorMiddleware)

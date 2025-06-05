@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="65d39f94-61d1-4f45-aaff-9c8618564b38" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/models/books.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/models/books.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/router/books.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/router/books.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/views/library/view.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/views/library/view.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +99,8 @@
       <workItem from="1747973338847" duration="566000" />
       <workItem from="1748253932844" duration="2697000" />
       <workItem from="1748316625594" duration="5860000" />
+      <workItem from="1748338449811" duration="1126000" />
+      <workItem from="1748349140855" duration="17000" />
     </task>
     <servers />
   </component>

@@ -44,41 +44,5 @@
         </div>
     </div>
 </div>
-<script src="/socket.io/socket.io.js"></script>
-<script>
-    const socket = io();
-    const bookId = '<%= book._id %>';
-    document.getElementById('comment-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const commentText = document.getElementById('comment-text').value.trim();
-
-        if (commentText) {
-            socket.emit('addComment', {bookId, comment: commentText});
-
-            document.getElementById('comment-text').value = '';
-        }
-    });
-
-    socket.on('newComment', function(data) {
-        if (data.bookId === bookId) {
-            const commentsList = document.getElementById('comments-list');
-            const noCommentsMsg = commentsList.querySelector('p');
-
-            if (noCommentsMsg && noCommentsMsg.textContent === 'Пока нет комментариев') {
-                commentsList.innerHTML = '';
-            }
-
-            const commentElement = document.createElement('div');
-            commentElement.className = 'card mb-2';
-            commentElement.innerHTML = `
-                <div class="card-body p-2">
-                    <p class="mb-0">${data.comment}</p>
-                </div>
-            `;
-
-            commentsList.appendChild(commentElement);
-        }
-    });
-</script>
 
 <%- include('../layouts/layout-end') %>

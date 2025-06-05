@@ -154,7 +154,6 @@ const addComment = async (req, res) => {
     const {id} = req.params;
     const {comment} = req.body;
     const io = req.io
-    console.log("Полученные данные:", {id, comment})
     try {
         const book = await booksModel.findById(id);
         if (!book) {
@@ -163,7 +162,6 @@ const addComment = async (req, res) => {
 
         book.comments.push(comment);
         await book.save();
-        console.log("Сохранённая книга:", book.toObject())
 
         io.emit('newComment', {bookId: id, comment});
 
